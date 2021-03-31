@@ -13,8 +13,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public static final String COL_2 = "NAME";
     public static final String COL_3 = "SURNAME";
     public static final String COL_4 = "MARKS";
-    public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+
+    public DatabaseHelper(@Nullable Context context) {
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
