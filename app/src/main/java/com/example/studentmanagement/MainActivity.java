@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAddData;
     Button btnViewAll;
     Button btnViewUpdate;
+    Button btnDelete;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +29,16 @@ public class MainActivity extends AppCompatActivity {
         editMarks = (EditText)findViewById(R.id.editText_marks);
         btnAddData = (Button) findViewById(R.id.button_add);
         btnViewAll = (Button) findViewById(R.id.button_viewAll);
-        btnViewUpdate = (Button) findViewById( (R.id.button_update)) ;
+        btnViewUpdate = (Button) findViewById( R.id.button_update);
+        btnDelete = (Button) findViewById( R.id.button_delete);
         AddData();
         ViewAll();
+        UpdateData();
+        DeleteData();
 
 
     }
+
     public void UpdateData () {
         btnViewUpdate.setOnClickListener(
                 new View.OnClickListener() {
@@ -41,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         boolean isUpdated = myDb.updateData(editTextId.getText().toString(),editName.getText().toString(),
                                 editSurname.getText().toString(),editMarks.getText().toString());
+                        if(isUpdated == true)
+                            Toast.makeText(MainActivity.this, "Data is updated", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(MainActivity.this, "Data is not updated", Toast.LENGTH_LONG).show();
+
                     }
                 }
         );
@@ -53,12 +63,27 @@ public class MainActivity extends AppCompatActivity {
                         boolean isInserted = myDb.insertData(editName.getText().toString(),
                                 editSurname.getText().toString(),
                                 editMarks.getText().toString() );
-                        if(isInserted =true)
+                        if(isInserted ==true)
                             Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(MainActivity.this, "Data is not Inserted", Toast.LENGTH_LONG).show();
 
 
+
+                    }
+                }
+        );
+    }
+    public void DeleteData() {
+        btnDelete.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Integer delectedRows = myDb.deleteData(editTextId.getText().toString());
+                        if (delectedRows > 0)
+                            Toast.makeText(MainActivity.this, "Data has been deleted", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(MainActivity.this, "Data has not been deleted", Toast.LENGTH_LONG).show();
 
                     }
                 }
@@ -95,5 +120,6 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
+
     }
 }

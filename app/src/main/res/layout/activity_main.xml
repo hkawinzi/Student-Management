@@ -89,15 +89,22 @@
         android:id="@+id/button_viewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="View all"
         tools:layout_editor_absoluteX="244dp"
         tools:layout_editor_absoluteY="501dp" />
 
     <Button
         android:id="@+id/button_update"
-        android:layout_width="318dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Button"/>
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete" />
 
 
 </LinearLayout>
