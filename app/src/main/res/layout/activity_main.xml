@@ -67,6 +67,14 @@
         android:layout_height="wrap_content"
         android:text="Add data"
         app:backgroundTint="@color/material_on_background_disabled"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="482dp" />
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View all"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="501dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
