@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+ >
 
 
     <TextView
@@ -14,6 +16,15 @@
         android:gravity="center"
         android:text="Name"
         tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="211dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
@@ -33,15 +44,6 @@
         android:text="Marks"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="296dp" />
-
-    <EditText
-        android:id="@+id/editText_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/editText_surname"
@@ -71,10 +73,10 @@
         tools:layout_editor_absoluteY="501dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_viewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="View all"
         tools:layout_editor_absoluteX="244dp"
         tools:layout_editor_absoluteY="501dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

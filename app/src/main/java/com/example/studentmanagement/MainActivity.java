@@ -2,6 +2,7 @@ package com.example.studentmanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
     EditText editName,editText_surname,editSurname,editMarks;
     Button btnAddData;
+    Button btnViewAll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         editSurname = (EditText)findViewById(R.id.editText_surname);
         editMarks = (EditText)findViewById(R.id.editText_marks);
         btnAddData = (Button) findViewById(R.id.button_add);
+        btnViewAll = (Button) findViewById(R.id.button_viewAll);
         AddData();
 
     }
@@ -44,5 +47,18 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+    public void viewAll() {
+        btnViewAll.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Cursor results = myDb.getAllData();
+                        if(results.getCount() == 0) {
+                            return;
+                        }
 
+                    }
+                }
+        );
+    }
 }
