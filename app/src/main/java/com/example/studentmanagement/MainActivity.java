@@ -1,5 +1,6 @@
 package com.example.studentmanagement;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
@@ -56,9 +57,20 @@ public class MainActivity extends AppCompatActivity {
                         if(results.getCount() == 0) {
                             return;
                         }
+                        StringBuffer buffer = new StringBuffer();
+                        while (results.moveToNext()) {
+                            buffer.append("id:" + results.getString(0) +"\n");
+                            buffer.append("Name:" + results.getString(1) +"\n");
+                            buffer.append("Surname:" + results.getString(2) +"\n");
+                            buffer.append("Marks:" + results.getString(3) +"\n\n");
 
+
+                        }
                     }
                 }
         );
+    }
+    public void showMessage(String title,String Message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
     }
 }
