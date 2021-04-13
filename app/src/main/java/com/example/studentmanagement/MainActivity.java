@@ -3,6 +3,7 @@ package com.example.studentmanagement;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -21,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
         editMarks = (EditText)findViewById(R.id.editText_Marks);
         btnAddData = (Button) findViewById(R.id.button_add);
 
+    }
+    public void AddData(){
+        btnAddData.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                }
+        );
     }
 
 }
