@@ -5,9 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
- >
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/Id"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:text="Id"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView"
@@ -20,8 +32,8 @@
 
     <EditText
         android:id="@+id/editText_name"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:layout_width="106dp"
+        android:layout_height="27dp"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="211dp"
@@ -35,6 +47,14 @@
         android:text="Surname"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="176dp" />
+    <EditText
+        android:id="@+id/editText_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="184dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -45,14 +65,7 @@
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="296dp" />
 
-    <EditText
-        android:id="@+id/editText_surname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="203dp"
-        tools:layout_editor_absoluteY="184dp" />
+
 
     <EditText
         android:id="@+id/editText_marks"
@@ -79,4 +92,12 @@
         android:text="View all"
         tools:layout_editor_absoluteX="244dp"
         tools:layout_editor_absoluteY="501dp" />
+
+    <Button
+        android:id="@+id/Update"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+
 </LinearLayout>

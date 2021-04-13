@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddData = (Button) findViewById(R.id.button_add);
         btnViewAll = (Button) findViewById(R.id.button_viewAll);
         AddData();
+        ViewAll();
 
     }
     public void AddData(){
@@ -48,13 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
-    public void viewAll() {
+    public void ViewAll() {
         btnViewAll.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Cursor results = myDb.getAllData();
                         if(results.getCount() == 0) {
+                            showMessage("error", "No data found");
                             return;
                         }
                         StringBuffer buffer = new StringBuffer();
@@ -65,12 +67,18 @@ public class MainActivity extends AppCompatActivity {
                             buffer.append("Marks:" + results.getString(3) +"\n\n");
 
 
+
                         }
+                        showMessage("Data", buffer.toString());
                     }
                 }
         );
     }
     public void showMessage(String title,String Message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 }
