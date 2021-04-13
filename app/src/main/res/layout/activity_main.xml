@@ -15,7 +15,7 @@
         android:gravity="center" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/editTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -94,7 +94,7 @@
         tools:layout_editor_absoluteY="501dp" />
 
     <Button
-        android:id="@+id/Update"
+        android:id="@+id/button_update"
         android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:text="Button" />

@@ -12,23 +12,38 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
-    EditText editName,editText_surname,editSurname,editMarks;
+    EditText editName,editTextId,editSurname,editMarks;
     Button btnAddData;
     Button btnViewAll;
+    Button btnViewUpdate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDb = new DatabaseHelper(this);
 
+        editTextId = (EditText)findViewById(R.id.editTextId);
         editName = (EditText)findViewById(R.id.editText_name);
         editSurname = (EditText)findViewById(R.id.editText_surname);
         editMarks = (EditText)findViewById(R.id.editText_marks);
         btnAddData = (Button) findViewById(R.id.button_add);
         btnViewAll = (Button) findViewById(R.id.button_viewAll);
+        btnViewUpdate = (Button) findViewById( (R.id.button_update)) ;
         AddData();
         ViewAll();
 
+
+    }
+    public void UpdateData () {
+        btnViewUpdate.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isUpdated = myDb.updateData(editTextId.getText().toString(),editName.getText().toString(),
+                                editSurname.getText().toString(),editMarks.getText().toString());
+                    }
+                }
+        );
     }
     public void AddData(){
         btnAddData.setOnClickListener(
