@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        myDb.insertData(editName.getText().toString(),
+                                editSurname.getText().toString(),
+                                editMarks.getText().toString();
+
 
                     }
                 }
