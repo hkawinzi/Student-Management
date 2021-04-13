@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        myDb.insertData(editName.getText().toString(),
+                        boolean isInserted = myDb.insertData(editName.getText().toString(),
                                 editSurname.getText().toString(),
-                                editMarks.getText().toString();
+                                editMarks.getText().toString() );
 
 
                     }
