@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
-    EditText editName,editSurname,editMarks;
+    EditText editName,editText_surname,editSurname,editMarks;
     Button btnAddData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         editName = (EditText)findViewById(R.id.editText_name);
         editSurname = (EditText)findViewById(R.id.editText_surname);
-        editMarks = (EditText)findViewById(R.id.editText_Marks);
+        editMarks = (EditText)findViewById(R.id.editText_marks);
         btnAddData = (Button) findViewById(R.id.button_add);
         AddData();
 
