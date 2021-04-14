@@ -4,107 +4,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="#56C6BC"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/Id"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_width="144dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:height="50dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center_vertical"
         android:text="Id"
-        android:gravity="center" />
+        android:textColor="#352F2F"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="-50dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:filterTouchesWhenObscured="false"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="120dp"
-        android:layout_height="44dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Name"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editText_name"
-        android:layout_width="106dp"
-        android:layout_height="27dp"
+        android:layout_width="183dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="-50dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textStyle="italic"
         tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="120dp"
-        android:layout_height="44dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Surname"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="176dp" />
+
     <EditText
         android:id="@+id/editText_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="203dp"
-        tools:layout_editor_absoluteY="184dp" />
+        android:textStyle="italic"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="120dp"
-        android:layout_height="44dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Marks"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="296dp" />
-
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
     <EditText
         android:id="@+id/editText_marks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="-40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="296dp" />
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/button_add"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:text="Add data"
-        app:backgroundTint="@color/material_on_background_disabled"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="501dp" />
-
-    <Button
-        android:id="@+id/button_viewAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="View all"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:backgroundTint="@color/material_on_background_disabled" />
 
     <Button
         android:id="@+id/button_update"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"/>
+        android:layout_height="80dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="-80dp"
+        android:text="Update"
+        app:backgroundTint="#2F472F" />
+
+
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="-80dp"
+        android:height="60dp"
+        android:text="View all" />
+
 
     <Button
         android:id="@+id/button_delete"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginTop="30dp"
         android:text="Delete" />
+
+    <ListView
+        android:id="@+id/lv001"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>

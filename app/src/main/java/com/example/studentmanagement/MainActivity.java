@@ -2,13 +2,17 @@ package com.example.studentmanagement;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
+import android.view.View.OnClickListener;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper myDb;
@@ -17,10 +21,15 @@ public class MainActivity extends AppCompatActivity {
     Button btnViewAll;
     Button btnViewUpdate;
     Button btnDelete;
+    ListView myListView;
+    SimpleCursorAdapter mSCA;
+    Cursor mCsr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myListView = (ListView) this.findViewById(R.id.lv001)
         myDb = new DatabaseHelper(this);
 
         editTextId = (EditText)findViewById(R.id.editTextId);
@@ -35,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         ViewAll();
         UpdateData();
         DeleteData();
+
 
 
     }
@@ -75,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
     public void DeleteData() {
+
         btnDelete.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
